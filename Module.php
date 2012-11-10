@@ -27,7 +27,7 @@ class Module
         $sessionManager = new SessionManager($config, $storage, $saveHandler);
         Container::setDefaultManager($sessionManager);
 
-        $sessionManager->start();
+        //$sessionManager->start();
     }
 
     public function getServiceConfig()

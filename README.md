@@ -12,18 +12,14 @@ You have a number of choices for installing `AkrabatSession`:
 
 Add `"akrabat/akrabat-session": "dev-master"` to your `composer.json` file and run `php composer.phar update`.
 
-### by cloning the project
+### as a Git Submodule
 
 Clone this project into your `./vendor/` directory:
 
         git submodule add git://github.com/akrabat/AkrabatSession.git vendor/AkrabatSession
 
-### as a Git Submodule
 
-Clone this project into your `./vendor/` directory:
-
-        cd vendor
-        git clone git://github.com/akrabat/AkrabatSession.git
+You can also just clone the module into your `./vendor/` directory or download it via the 'Zip' button on github.
 
 ## Configuration
 
