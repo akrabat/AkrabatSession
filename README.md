@@ -6,25 +6,39 @@ the cookie used to hold the session id.
 
 ##Installation
 
+You have a number of choices for installing `AkrabatSession`:
 
-### Git Submodule
+### with Composer
 
-Clone this project into your `./vendor/` directory
+Add `"akrabat/akrabat-session": "dev-master"` to your `composer.json` file and run `php composer.phar update`.
 
-    cd vendor;
-    git clone git://github.com/akrabat/AkrabatSession.git
+### by cloning the project
 
+Clone this project into your `./vendor/` directory:
+
+        git submodule add git://github.com/akrabat/AkrabatSession.git vendor/AkrabatSession
+
+### as a Git Submodule
+
+Clone this project into your `./vendor/` directory:
+
+        cd vendor
+        git clone git://github.com/akrabat/AkrabatSession.git
 
 ## Configuration
 
-Firstly, you need to edit `config/application.config.php` and add 
-`AkrabatSession` to the  `modules` section
+Once you have installed AkrabatSession, you need to enable it by editing 
+`config/application.config.php` and adding `AkrabatSession` to the `modules`
+section.
 
-You then should add the following to your `config/autoload/global.php`:
+To configure the session as you required, add the following to your 
+`config/autoload/global.php` file:
 
         'session' => array(
             'name' => 'MY_SESSION_NAME_HERE',
         ),
+
+Add additional configuration keys as needed.
 
 
 ### Available configuration keys
