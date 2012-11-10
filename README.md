@@ -48,7 +48,7 @@ and `Zend\Session\Config\StandardConfig` classes. Most map to the PHP level
 [session directives](http://www.php.net/manual/en/session.configuration.php)
 
 
-Some The key ones are:
+Some of the more useful ones are:
 
 * `name` - Name of the session
 * `remember_me_seconds` - Number of seconds to make session sticky, when rememberMe() is called. Default is 2 weeks (1209600 seconds)
