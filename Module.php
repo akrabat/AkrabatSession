@@ -13,15 +13,15 @@ class Module
         $sm = $e->getApplication()->getServiceManager();
 
         $config = $sm->get('session_config');
-        try {
+
+        $storage = null;
+        if ($sm->canCreate('session_storage', false)) {
             $storage = $sm->get('session_storage');
-        } catch (ServiceNotFoundException $e) {
-            $storage = null;
         }
-        try {
+
+        $saveHandler = null;
+        if ($sm->canCreate('session_save_handler', false)) {
             $saveHandler = $sm->get('session_save_handler');
-        } catch (ServiceNotFoundException $e) {
-            $saveHandler = null;
         }
         
         $sessionManager = new SessionManager($config, $storage, $saveHandler);
@@ -58,17 +58,6 @@ class Module
                 'name' => 'ZF2_SESSION',
                 ),
         );
-    }
-
-    public function getAutoloaderConfig()
-    {
-        return array(
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                    ),
-                ),
-            );
     }
 
 }

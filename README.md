@@ -43,3 +43,9 @@ Some The key ones are:
 * `use_only_cookies` - Specifies that only cookies are used and not session ids in URLs
 
 Note: `AkrabatSession` sets the `cookie_httponly` and `use_only_cookies` settings to true
+
+
+## Session storage and save handler classes
+
+If you need to set the SessionMangers's storage or save handler class, then
+simply create a ServiceManager alias of `session_storage` or `session_save_handler`.
