@@ -1,6 +1,6 @@
 #AkrabatSession
 
-This ZF2 module is intended to make it simple to change the settings of a 
+This ZF2 module is intended to make it simple to change the settings of a
 session; specifically the most common change required is to set a name for
 the cookie used to hold the session id.
 
@@ -23,11 +23,11 @@ You can also just clone the module into your `./vendor/` directory or download i
 
 ## Configuration
 
-Once you have installed AkrabatSession, you need to enable it by editing 
+Once you have installed AkrabatSession, you need to enable it by editing
 `config/application.config.php` and adding `AkrabatSession` to the `modules`
 section.
 
-To configure the session as you required, add the following to your 
+To configure the session as you required, add the following to your
 `config/autoload/global.php` file:
 
         'session' => array(
@@ -51,6 +51,7 @@ Some of the more useful ones are:
 * `save_path` - By default, the path where the session files are created
 * `cookie_httponly` - Marks the cookie as accessible only through the HTTP protocol.
 * `use_only_cookies` - Specifies that only cookies are used and not session ids in URLs
+* `cookie_secure` - Specifies that cookies should only be sent over secure connections
 
 Note: `AkrabatSession` sets the `cookie_httponly` and `use_only_cookies` settings to true
 
