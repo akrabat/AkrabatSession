@@ -23,7 +23,7 @@ class Module
         if ($sm->has('session_save_handler', false)) {
             $saveHandler = $sm->get('session_save_handler');
         }
-        
+
         $sessionManager = new SessionManager($config, $storage, $saveHandler);
         Container::setDefaultManager($sessionManager);
 
@@ -55,6 +55,7 @@ class Module
                 'use_cookies' => true,
                 'use_only_cookies' => true,
                 'cookie_httponly' => true,
+                'cookie_secure' => false,
                 'name' => 'ZF2_SESSION',
                 ),
         );
